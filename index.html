@@ -10,10 +10,11 @@
         <link rel="stylesheet" type="text/css" href="./CSS/video.css">
         <link rel="stylesheet" type="text/css" href="./CSS/main.css">
         <link rel="stylesheet" type="text/css" href="./CSS/navbar.css">
+        <link rel="stylesheet" type="text/css" href="./CSS/button.css">
+        <link rel="stylesheet" type="text/css" href="./CSS/preloader.css">
         <!-- JavaScript Files -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> 
         <script src="./JS/main.js"></script>
-        <script>initBackground();</script>
         <!-- Icons (dead game lol)-->
         <link rel="apple-touch-icon" sizes="180x180" href="./assets/icons/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="./assets/icons/favicon-32x32.png">
@@ -25,6 +26,74 @@
     <label for="main-navigation-toggle">
       <span></span>
     </label>
+    <!-- LOADING SCREEN -->
+    <div class="preloader" id="preloader" style="display: block;">
+      <div class="preloader__ring">
+        <div class="preloader__sector">L</div>
+        <div class="preloader__sector">o</div>
+        <div class="preloader__sector">a</div>
+        <div class="preloader__sector">d</div>
+        <div class="preloader__sector">i</div>
+        <div class="preloader__sector">n</div>
+        <div class="preloader__sector">g</div>
+        <div class="preloader__sector">.</div>
+        <div class="preloader__sector">.</div>
+        <div class="preloader__sector">.</div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+      </div>
+      <div class="preloader__ring">
+        <div class="preloader__sector">L</div>
+        <div class="preloader__sector">o</div>
+        <div class="preloader__sector">a</div>
+        <div class="preloader__sector">d</div>
+        <div class="preloader__sector">i</div>
+        <div class="preloader__sector">n</div>
+        <div class="preloader__sector">g</div>
+        <div class="preloader__sector">.</div>
+        <div class="preloader__sector">.</div>
+        <div class="preloader__sector">.</div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+        <div class="preloader__sector"></div>
+      </div>
+    </div>
+
     <!-- NAVBAR -->
     <nav id="main-navigation" class="nav-main">
       <ul class="menu">
@@ -67,23 +136,70 @@
         </li>
       </ul>
     </nav>
-    
-    <body>
-        <div class="fullscreen-bg">
+
+    <body id="body">
+
+        <div class="fullscreen-bg" id="fullscreen-bg" style="display: none;">
             <video loop muted autoplay class="fullscreen-bg__video">
               <source id="source" src="./assets/videos/1.mp4" type="video/mp4">
                 <!-- i need to make a function that produces the string to create the video -->
             </video>
           </div>
+          <script>initBackground();</script>
+      
+<!--           
+<div class="container">
+  <div class="text-container"><span class="text">VAPORJAWN
+      <div class="icon--container">
+        <svg class="icon star">
+          <use xlink:href="#star"></use>
+        </svg>
+        <svg class="icon star">
+          <use xlink:href="#star"></use>
+        </svg>
+        <svg class="icon star">
+          <use xlink:href="#star"></use>
+        </svg>
+        <svg class="icon star">
+          <use xlink:href="#star"></use>
+        </svg>
+      </div></span><span class="text">VAPORJAWN</span><span class="text">VAPORJAWN</span><span class="text">VAPORJAWN</span><span class="text">VAPORJAWN</span><span class="text">VAPORJAWN</span><span class="text">VAPORJAWN</span>
+  </div>
+  <div class="shadow-container"><span class="text shadow">VAPORJAWN
+      <div class="icon--container">
+        <svg class="icon star">
+          <use xlink:href="#star"></use>
+        </svg>
+        <svg class="icon star">
+          <use xlink:href="#star"></use>
+        </svg>
+        <svg class="icon star">
+          <use xlink:href="#star"></use>
+        </svg>
+        <svg class="icon star">
+          <use xlink:href="#star"></use>
+        </svg>
+      </div></span><span class="text shadow">VAPORJAWN</span><span class="text shadow">VAPORJAWN</span><span class="text shadow">VAPORJAWN</span><span class="text shadow">VAPORJAWN</span><span class="text shadow">VAPORJAWN</span><span class="text shadow">VAPORJAWN</span>
+  </div>
+</div>
+<svg class="icons">
+  <symbol id="star" viewbox="0 0 296.789 296.789">
+    <path d="m 128.07699,246.6702 16.62278,44.87778 c 0.62488,1.68958 2.24042,2.81007 4.04647,2.81007 1.80605,0 3.42159,-1.12049 4.04646,-2.81007 l 16.62278,-44.87778 c 13.45522,-36.3312 42.2174,-64.97071 78.70166,-78.36601 l 45.06998,-16.55188 c 1.69428,-0.62221 2.81958,-2.23087 2.81958,-4.02922 0,-1.79835 -1.1253,-3.40699 -2.81958,-4.0292 l -45.07253,-16.5519 C 211.63034,113.74417 182.86815,85.107178 169.41548,48.778514 L 152.7927,3.900743 c -0.62487,-1.6870583 -2.24041,-2.8075483 -4.04646,-2.8075483 -1.80605,0 -3.42159,1.12049 -4.04647,2.8075483 L 128.07699,48.778514 C 114.62179,85.107178 85.862143,113.74417 49.375346,127.14199 l -45.0725171,16.5519 c -1.694284,0.62221 -2.819573,2.23085 -2.819573,4.0292 0,1.79835 1.125289,3.40701 2.819573,4.02922 l 45.0699771,16.55188 c 36.486798,13.3953 65.248984,42.03228 78.704184,78.36601 z"></path>
+  </symbol>
+</svg>
+<div class="support"><a href="https://twitter.com/DevLoop01" target="_blank"><i class="fab fa-twitter-square">   </i></a><a href="https://codepen.io/dev_loop/" target="_blank"><i class="fab fa-codepen"></i></a></div> -->
 
           <!-- where the real body starts -->
-          <h1>VAPORJAWN</h1>
+          <div id='realBody' class='content'>
+            <h1>VAPORJAWN</h1>
 
-          <p>This is one of my favorite side project to talk about.<br> <a href="https://instagram.com/vaporjawn" target="_blank">Vaporjawn</a> 
-            is my former "<a href="https://www.dictionary.com/e/slang/finsta/#:~:text=A%20finsta%20is%20a%20secondary,have%20more%20heavily%20curated%20content." target="_blank">Finsta</a>"
-            that I turned business.
-            <br></p>
-
+            <p>This is one of my favorite side projects to talk about.<br> <a href="https://instagram.com/vaporjawn" target="_blank">Vaporjawn</a> 
+              is my former "<a href="https://www.dictionary.com/e/slang/finsta/#:~:text=A%20finsta%20is%20a%20secondary,have%20more%20heavily%20curated%20content." target="_blank">Finsta</a>"
+              that I turned business.
+              <br></p>
+  
+            <button class="btn">hi</button>
+          </div>
     </body>
     <footer>
 
