@@ -24,7 +24,7 @@ window.onload = setTimeout(function () {
     document.getElementById('body').style.display = "block";
     document.getElementById('preloader').style.display = "block";
     $('body').toggleClass('body');
-    isLoaded();},5000);
+    isLoaded();},3000);
 
 // JQUERY IMPORT
 

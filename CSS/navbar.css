@@ -54,7 +54,7 @@
  .nav-main::before, .nav-main::after {
 	 content: '';
 	 background-color: var(--color-primary);
-	 height: 50%;
+	 height: 110%;
 	 left: 0;
 	 position: absolute;
 	 transform: translateX(-110%);
