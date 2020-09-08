@@ -2,8 +2,8 @@
  :root {
 	 --color-primary: #18181a;
 	 --color-secondary: #75757c;
-	 --color-dark: #364c62;
-	 --color-light: #f5f5f5;
+	 --color-dark: #00bcdd;
+	 --color-light: #ff00ff;
 	 --font-family-primary: 'Roboto Mono', monospace;
 	 --font-family-secondary: 'Rubik Mono One', sans-serif;
 	 --td: 150ms;
@@ -54,7 +54,7 @@
  .nav-main::before, .nav-main::after {
 	 content: '';
 	 background-color: var(--color-primary);
-	 height: 50%;
+	 height: 110%;
 	 left: 0;
 	 position: absolute;
 	 transform: translateX(-110%);

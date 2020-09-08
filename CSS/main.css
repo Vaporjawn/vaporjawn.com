@@ -6,3 +6,9 @@ p{
     margin: auto;
     text-align: center;
 }
+.content{
+    display: none;
+}
+.preloader{
+    display: block;
+}
